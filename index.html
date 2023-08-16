@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color change</title>
+    <style>
+        .car{
+  padding-top: 0;
+}
+.car li{
+  list-style: none;
+  position: relative;
+padding: 40px;
+  max-width: 200px;
+  cursor: pointer;
+  top: 100px;
+}
+.car img{
+    display: block;
+  max-width: 200px;
+  transition:1s ;
+}
+.car img:hover{
+  transform: translateX(40px);
+  transition: 0.5s;
+}
+.big-img img{
+    position: absolute;
+  left: 40%;
+  top: 20%;
+  max-width: 500px;
+  max-height: 300px;
+  transition: 1s;
+}
+.big:hover{
+    transform: translateX(30px);
+    transition: 1s;
+}
+.path{
+  display: block;
+    position: absolute;
+    height:100%;
+    width: 100%;
+background-color: rgb(214, 214, 136);
+clip-path: circle(520px at left 300px);
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.body{
+  width: 100%;
+  height: 100%;
+  background: rgb(36, 223, 160);    
+}
+.head1{
+  position: absolute;
+  left: 40%;
+  display: inline;
+  margin-top: 20px;
+font-weight: bolder;
+  font-size: 70px;
+  font-family: "Segoe Script";
+  color: red;
+  
+}
+
+
+
+
+
+#change{
+  position: absolute;
+  left: 800px;
+  top: 350px;
+}
+#change{
+    color: rgb(67, 43, 226);
+font-style: inherit;
+}
+    </style>
+</head>
+<body  class="body">
+  
+    
+    <div class="car">
+      <h1 class="head1">Thamizhmagan Cars</h1>
+      <h2 id="change"  ></h2>
+ 
+        <div class="path">
+          
+        <ul>
+            <li><img src="./Colorful-Side-View-Lamborghini-Transparent-PNG.png" onclick="farari();big('./Colorful-Side-View-Lamborghini-Transparent-PNG.png');path('orange');bg('pink')"></li>
+            <li><img src="./blue-car-hp-left-bmw.png" onclick="Audi();big('./blue-car-hp-left-bmw.png');path('red');bg('yellow')"></li>
+            <li><img src="./car 2 cutting.png" onclick="myFunction();big('./car 2 cutting.png');path('orange');bg('pink')"></li>
+        </ul>
+    </div>
+    <div class="big-img">
+        <img src="./car 2 cutting.png" class="big">   
+</div> 
+<script>
+    function big(image){
+        document.querySelector('.big').src=image;
+
+    }
+    function path(color){
+     const path=document.querySelector('.path');
+     path.style.background = color;
+    }
+    function bg(background){
+        const bg=document.querySelector('.body');
+        bg.style.background=background;
+    }
+    function myFunction() {
+  document.getElementById("change").innerHTML = "Suzuki in Japanese multinational corporation headquartered in Minami-ku, Hamamatsu, Japan.[5] Suzuki manufactures automobiles, motorcycles, all-terrain vehicles (ATVs), outboard marine engines, wheelchairs and a variety of other small internal combustion engines.There were some concerns that the Indian market was too small to absorb the comparatively large production planned by Maruti Suzuki, with the government even considering adjusting the petrol tax and lowering the excise duty in order to boost sales.[13] Local production commenced in December 1983 with the introduction of the SS30/SS40 Suzuki Fronte/Alto-based Maruti 800.[14] In 1984, the Maruti Van with the same three-cylinder engine as the 800 was released and the installed capacity of the plant in Gurgaon reached 40,000 units.";
+}
+
+function farari() {
+  document.getElementById("change").innerHTML="Ferrari S.p.A. (/fəˈrɑːri/; Italian: [ferˈraːri]) is an Italian luxury sports car manufacturer based in Maranello, Italy. Founded in 1939 by Enzo Ferrari (1898–1988), the company adopted its current name in 1945 and began producing its line of cars in 1947.The company currently offers a large model range which includes several supercars, grand tourers, and one SUV. Many early Ferraris, dating to the 1950s and 1960s, count among the most expensive cars ever sold at auction. Owing to a combination of its cars, enthusiast culture, and successful licensing deals, in 2019 Ferrari was labelled the world's strongest brand by the financial consultency Brand Finance";
+}
+function Audi() {
+  document.getElementById("change").innerHTML = " Audi Car ,In August 1928, Jørgen Rasmussen, the owner of Dampf-Kraft-Wagen (DKW), acquired the majority of shares in Audiwerke AG.[21] In the same year, Rasmussen bought the remains of the U.S. automobile manufacturer Rickenbacker, including the manufacturing equipment for 8-cylinder engines. These engines were used in Audi Zwickau and Audi Dresden models that were launched in 1929. At the same time, 6-cylinder and 4-cylinder (the 'four' with a Peugeot engine) models were manufactured. Audi cars of that era were luxurious cars equipped with special bodywork.";
+}
+
+// Call the function
+
+
+</script>
+</body>
+</html>
